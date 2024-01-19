@@ -2,12 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply bg-dark-0 text-light-0;
+}
+
 .transall {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   transition-duration: 0.5s;
 }
 .transall:hover {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition-duration: 0.5s;
+}
+
+.text-hover:hover {
+  margin-left: 28px;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition-duration: 0.5s;
+}
+.text-hover {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   transition-duration: 0.5s;
