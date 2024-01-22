@@ -5,11 +5,16 @@ import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
 import { whatsapp } from "@/assets";
+import { paddingX } from "../constants/styles";
 
 export default function ContactInfos() {
   const [hovered, setHovered] = useState(false);
   return (
-    <div className="flex sm:flex-row flex-col gap-x-24 gap-y-5 justify-center">
+    <div
+      className={
+        "flex sm:flex-row flex-col gap-x-24 gap-y-5 justify-center" + paddingX
+      }
+    >
       <motion.ul>
         {socials.map((social, index) => (
           <motion.li
@@ -71,7 +76,7 @@ export default function ContactInfos() {
         }}
         className=" bg-light-0 px-5 py-4 text-dark-0 font-bold rounded-full h-fit my-auto hover:text-light-0 hover:bg-dark-0 hover:px-7 transall"
       >
-        <Link className="flex items-center gap-2" href={"/"}>
+        <Link className="flex justify-center items-center gap-2" href={"/"}>
           <span className="uppercase flex items-center">Reserver</span>
           {hovered && (
             <div className="overflow-hidden block">

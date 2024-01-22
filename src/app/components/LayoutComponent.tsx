@@ -1,34 +1,49 @@
+"use client";
 import Image, { StaticImageData } from "next/image";
 import Nav from "./Nav";
 import ContactInfos from "./ContactInfos";
 import Button from "./Button";
+import { usePathname } from "next/navigation";
+import { paddingX } from "../constants/styles";
+import { motion } from "framer-motion";
 
 export default function LayoutComponent({
   children,
   mainFrame,
 }: {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   mainFrame: StaticImageData;
 }) {
+  const pathname = usePathname();
   return (
     <div>
-      <div className="grid xl:grid-cols-3 grid-cols-2">
+      <div className="grid xl:grid-cols-3 sm:grid-cols-2">
         <div className="xl:col-span-2">
           <Nav />
-          <div>{children}</div>
+          <div className={paddingX}>{children}</div>
         </div>
-        <div className="w-full h-[80dvh] overflow-hidden relative">
-          <div className="absolute bottom-5 right-10">
-            <Button />
-          </div>
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{
+            duration: 0.5,
+            ease: "circInOut",
+          }}
+          className="w-full h-[80dvh] overflow-hidden relative hidden sm:block"
+        >
+          {pathname === "/" && (
+            <div className="absolute bottom-5 right-10">
+              <Button />
+            </div>
+          )}
           <Image
             alt="JouryBelle"
             src={mainFrame}
             className="h-full w-full object-cover"
           />
-        </div>
+        </motion.div>
       </div>
-      <div className="mt-10">
+      <div className="mt-10 mb-5">
         <ContactInfos />
       </div>
     </div>

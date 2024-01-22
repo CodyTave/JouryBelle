@@ -25,9 +25,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={Beauu.className}>
-        <LayoutComponent mainFrame={main}>{children}</LayoutComponent>
-      </body>
+      <body className={Beauu.className}>{children}</body>
     </html>
   );
 }

@@ -1,3 +1,6 @@
+import { manucure, soinHydra } from "@/assets";
+import { StaticImageData } from "next/image";
+
 export const navlinks = [
   {
     id: 1,
@@ -38,5 +41,35 @@ export const contact = [
     id: "address",
     content: "Bd Mohamed Ibnou Hayssoun 31, SIDIMOUMEN, Casablanca, Morocco",
     link: "https://www.google.com/maps/place/Casablanca/@33.578905,7.588445,11z/data=!3m1!4b1!4m5!3m4!1s0x12f0b7c3a7d0b5a3:0x2c1b0b9c7e0f5e3!8m2!3d33.5886!4d-7.61149",
+  },
+];
+
+export const Services: {
+  id: number;
+  title: string;
+  slug: string;
+  mainFrame: StaticImageData;
+  description: string;
+}[] = [
+  {
+    id: 1,
+    title: "Soins du visage",
+    slug: "soin-visage",
+    mainFrame: soinHydra,
+    description: `Plongez dans l'univers des soins du visage chez Joury Belle. Que ce soit pour une hydratation profonde, une lutte contre le vieillissement, ou simplement pour un éclat naturel, nos traitements personnalisés sont là pour répondre à tous vos besoins. Votre peau mérite le meilleur !`,
+  },
+  {
+    id: 2,
+    title: "Manucure",
+    slug: "manucure",
+    mainFrame: manucure,
+    description: `Vos mains sont votre carte de visite. Offrez-leur une manucure d'exception chez Joury Belle. Des couleurs tendances, des soins nourrissants et un fini impeccable pour révéler l'élégance de vos mains`,
+  },
+  {
+    id: 3,
+    title: "Soin HydraFacial",
+    slug: "soin-hydrafacial",
+    mainFrame: soinHydra,
+    description: `Rafraîchissez et réjuvenez votre peau avec notre soin hydra facial exclusif. Une technologie avancée pour nettoyer, hydrater et illuminer votre peau, laissant un teint éclatant et sain.`,
   },
 ];
