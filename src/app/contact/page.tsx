@@ -7,7 +7,7 @@ import { useState } from "react";
 import { MessageGenerator } from "../utils/functions";
 import { whatsappNumber } from "../constants/data";
 
-export default function page() {
+export default function Contact() {
   const [form, setForm] = useState({
     fullName: "",
     tel: "",
