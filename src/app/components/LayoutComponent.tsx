@@ -23,11 +23,11 @@ export default function LayoutComponent({
           <div className={paddingX}>{children}</div>
         </div>
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{
-            duration: 0.5,
-            ease: "circInOut",
+            duration: 0.8,
+            ease: "anticipate",
           }}
           className="w-full h-[80dvh] overflow-hidden relative hidden sm:block"
         >
@@ -44,7 +44,7 @@ export default function LayoutComponent({
         </motion.div>
       </div>
       <div className="mt-10 mb-5">
-        <ContactInfos />
+        <ContactInfos padding />
       </div>
     </div>
   );

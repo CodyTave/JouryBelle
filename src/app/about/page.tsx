@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import LayoutComponent from "../components/LayoutComponent";
 import { about } from "@/assets";
+import { aboutData } from "../constants/data";
 
 export default function page() {
   return (
@@ -28,7 +29,7 @@ export default function page() {
         }}
         className="mt-10 text-xl max-w-screen-sm font-light"
       >
-        {`Plongez dans l'univers des soins du visage chez Joury Belle. Que ce soit pour une hydratation profonde, une lutte contre le vieillissement, ou simplement pour un éclat naturel, nos traitements personnalisés sont là pour répondre à tous vos besoins. Votre peau mérite le meilleur !`}
+        {aboutData}
       </motion.p>
     </LayoutComponent>
   );

@@ -31,14 +31,14 @@ export default function Nav() {
             exit={{ top: "-100%" }}
             transition={{ duration: 0.5, ease: "circInOut" }}
             className={
-              "fixed top-0 left-0 w-screen h-[100dvh] bg-secondary-0 z-50 " +
+              "fixed top-0 left-0 w-screen h-[100dvh] bg-secondary-0 z-50 overflow-auto " +
               paddingX +
               paddingY
             }
           >
             <button
               onClick={() => setOpen(false)}
-              className="absolute top-5 right-5"
+              className="absolute top-5 right-10"
             >
               Fermer
             </button>
@@ -64,6 +64,7 @@ export default function Nav() {
                   }}
                 >
                   <Link
+                    onClick={() => setOpen(false)}
                     draggable
                     className="xs:text-6xl text-4xl font-medium text-hover"
                     href={link.link}

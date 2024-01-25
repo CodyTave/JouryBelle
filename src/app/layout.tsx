@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import LayoutComponent from "./components/LayoutComponent";
-import { main } from "@/assets";
 
 export const metadata: Metadata = {
   title: "JouryBelle Salon",
@@ -25,7 +23,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={Beauu.className}>{children}</body>
+      <body className={Beauu.className}>
+        <main>{children}</main>
+      </body>
     </html>
   );
 }

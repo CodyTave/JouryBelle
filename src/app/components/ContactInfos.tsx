@@ -1,19 +1,23 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
-import { contact, socials } from "../constants/data";
+import { contact, socials, whatsappNumber } from "../constants/data";
 import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
 import { whatsapp } from "@/assets";
 import { paddingX } from "../constants/styles";
 
-export default function ContactInfos() {
+export default function ContactInfos({
+  padding = false,
+}: {
+  padding?: boolean;
+}) {
   const [hovered, setHovered] = useState(false);
   return (
     <div
-      className={
-        "flex sm:flex-row flex-col gap-x-24 gap-y-5 justify-center" + paddingX
-      }
+      className={`flex sm:flex-row flex-col gap-x-24 gap-y-5 justify-center ${
+        padding && paddingX
+      }`}
     >
       <motion.ul>
         {socials.map((social, index) => (
@@ -74,12 +78,16 @@ export default function ContactInfos() {
           ease: "circInOut",
           delay: 1.2,
         }}
-        className=" bg-light-0 px-5 py-4 text-dark-0 font-bold rounded-full h-fit my-auto hover:text-light-0 hover:bg-dark-0 hover:px-7 transall"
+        className=" bg-light-0 px-5 py-4 text-dark-0 font-bold border border-light-0 rounded-full h-fit my-auto hover:text-light-0 hover:bg-dark-0 hover:px-7 transall"
       >
-        <Link className="flex justify-center items-center gap-2" href={"/"}>
+        <Link
+          target="_blank"
+          className="flex justify-center items-center gap-2"
+          href={`https://wa.me/${whatsappNumber}`}
+        >
           <span className="uppercase flex items-center">Reserver</span>
           {hovered && (
-            <div className="overflow-hidden block">
+            <div className="overflow-hidden block fadeInBlur">
               <Image className="w-4" alt="whatsapp" src={whatsapp} />
             </div>
           )}

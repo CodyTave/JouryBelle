@@ -1,5 +1,17 @@
-import { manucure, soinHydra } from "@/assets";
+import {
+  cheveux,
+  epilation,
+  manucure,
+  maquillage,
+  mariees,
+  meso,
+  pedicure,
+  soinHydra,
+  soinVisage,
+} from "@/assets";
 import { StaticImageData } from "next/image";
+
+export const whatsappNumber = "+212615630298";
 
 export const navlinks = [
   {
@@ -55,7 +67,7 @@ export const Services: {
     id: 1,
     title: "Soins du visage",
     slug: "soin-visage",
-    mainFrame: soinHydra,
+    mainFrame: soinVisage,
     description: `Plongez dans l'univers des soins du visage chez Joury Belle. Que ce soit pour une hydratation profonde, une lutte contre le vieillissement, ou simplement pour un éclat naturel, nos traitements personnalisés sont là pour répondre à tous vos besoins. Votre peau mérite le meilleur !`,
   },
   {
@@ -72,4 +84,50 @@ export const Services: {
     mainFrame: soinHydra,
     description: `Rafraîchissez et réjuvenez votre peau avec notre soin hydra facial exclusif. Une technologie avancée pour nettoyer, hydrater et illuminer votre peau, laissant un teint éclatant et sain.`,
   },
+  {
+    id: 4,
+    title: "Pedicure medicale",
+    slug: "pedicure",
+    mainFrame: pedicure,
+    description: `Prenez soin de vos pieds avec notre pédicure médicale. Traitement expert pour les pieds fatigués, secs ou avec des besoins spécifiques. Marchez en beauté et en confort avec Joury Belle.`,
+  },
+  {
+    id: 5,
+    title: "Maquillage",
+    slug: "maquillage",
+    mainFrame: maquillage,
+    description: `Exprimez votre style unique avec notre maquillage professionnel. Des looks naturels aux créations les plus audacieuses, notre équipe transformera votre vision en réalité.`,
+  },
+  {
+    id: 6,
+    title: "Mariees",
+    slug: "mariees",
+    mainFrame: mariees,
+    description: `Votre mariage, un moment magique. À Joury Belle, nous sommes spécialisés dans la création de looks de mariée époustouflants. Du maquillage à la coiffure, nous nous assurons que vous soyez la plus belle pour dire 'oui'.`,
+  },
+  {
+    id: 7,
+    title: "Soins Cheveux",
+    slug: "soin-cheveux",
+    mainFrame: cheveux,
+    description: `Vos cheveux, notre passion. À Joury Belle, nous offrons une gamme de soins capillaires personnalisés pour revitaliser, nourrir et embellir vos cheveux. Découvrez la transformation avec nos experts capillaires.`,
+  },
+  {
+    id: 8,
+    title: "Epilation",
+    slug: "epilation",
+    mainFrame: epilation,
+    description: `Profitez d'une peau lisse et soyeuse avec nos méthodes d'épilation professionnelles. Douceur, précision et confort pour une expérience d'épilation inégalée.`,
+  },
+  {
+    id: 9,
+    title: "Mesoiherapie Capillaire",
+    slug: "meso",
+    mainFrame: meso,
+    description: `Redonnez vie à vos cheveux avec notre traitement de mésothérapie capillaire. Une solution innovante pour renforcer, densifier et stimuler la croissance de vos cheveux. Cheveux plus forts, plus épais, naturellement.`,
+  },
 ];
+
+export const aboutData = `Plongez dans l'univers des soins du visage chez Joury Belle. Que ce soit pour une hydratation profonde,
+ une lutte contre le vieillissement, ou simplement pour un éclat naturel,
+  nos traitements personnalisés sont là pour répondre à tous vos besoins. Votre peau mérite le meilleur !`;
